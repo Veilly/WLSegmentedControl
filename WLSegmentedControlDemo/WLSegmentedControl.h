@@ -12,12 +12,12 @@
 
 - (id)initWithItems:(NSArray *)items andFrame:(CGRect)frame;
 
-@property (nonatomic,strong) UIColor *bottonLineColor;
+@property (nonatomic,strong) UIColor *buttomLineColor;
 @property (nonatomic,strong) UIColor *itemNormalColor;
 @property (nonatomic,strong) UIColor *itemHeightColor;
 @property (nonatomic,strong) UIColor *separatorLineColor;
 @property (nonatomic,assign) BOOL hiddenSeparatorLine;
-@property (nonatomic,assign) BOOL hiddenBottonLine;
+@property (nonatomic,assign) BOOL hiddenButtomLine;
 @property (nonatomic,readonly) NSInteger selectedItmeIndex;
 
 @property (nonatomic,copy) void (^itemSelectedAtIndex)(NSInteger index);

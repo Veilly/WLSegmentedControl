@@ -32,6 +32,12 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)showSepLineSwitchTapped:(id)sender {
+    self.segmentedControl.hiddenSeparatorLine=![(UISwitch *)sender isOn];
+}
+- (IBAction)showButtomLineSwitchTapped:(id)sender {
+    self.segmentedControl.hiddenButtomLine=![(UISwitch *)sender isOn];
+}
 
 - (WLSegmentedControl *)segmentedControl
 {
@@ -40,12 +46,10 @@
     }
     _segmentedControl = [[WLSegmentedControl alloc] initWithItems:@[@"上衣",@"外套",@"连衣裙",@"裤子",@"鞋子"] andFrame:CGRectMake(0,SCREENHEIGHT/2,SCREENWIDTH,30)];
     _segmentedControl.backgroundColor = [UIColor clearColor];
-    _segmentedControl.hiddenBottonLine = NO;
-    _segmentedControl.hiddenSeparatorLine = YES;
     __block typeof(self) vc= self;
     _segmentedControl.itemSelectedAtIndex = ^(NSInteger index)
     {
-        vc.selectedIndexLabel.text = [NSString stringWithFormat:@"当前选中的是：%d",index];
+        vc.selectedIndexLabel.text = [NSString stringWithFormat:@"当前选中的是：%ld",(long)index];
     };
     return _segmentedControl;
 }

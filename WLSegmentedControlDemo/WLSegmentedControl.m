@@ -81,7 +81,7 @@
 #pragma mark - setter
 - (void)setButtonLineColor:(UIColor *)buttonLineColor
 {
-    _bottonLineColor=buttonLineColor;
+    _buttomLineColor=buttonLineColor;
     [bottomLine setBackgroundColor:buttonLineColor];
 }
 
@@ -132,9 +132,9 @@
     }
 }
 
-- (void)setHiddenBottonLine:(BOOL)hiddenBottonLine
+- (void)setHiddenButtomLine:(BOOL)hiddenBottonLine
 {
-    _hiddenBottonLine = hiddenBottonLine;
+    _hiddenButtomLine = hiddenBottonLine;
     bottomLine.hidden = hiddenBottonLine;
     for (id item in self.subviews)
     {
